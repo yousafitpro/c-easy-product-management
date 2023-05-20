@@ -1,0 +1,40 @@
+{
+    "name": "yousafitpro/easy-product-management",
+    "type": "library",
+    "description": "Very helpful for product management",
+    "keywords": ["product","product management","woocomeress"],
+    "homepage": "https://github.com/yousafitpro/c-easy-product-management.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhammad Yousaf",
+            "email": "yousaf.connect@gmail.com",
+            "homepage": "https://github.com/yousafitpro",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "files": [
+           "src/helpers/main.php"
+        ],
+        "psr-4": {
+            "Yousafitpro\\EPM\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        },
+        "laravel": {
+            "providers": [
+              "Yousafitpro\\EPM\\EPMServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+
+}
