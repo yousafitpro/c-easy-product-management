@@ -11,15 +11,14 @@
 
 //adasd
 //asdasd
-Route::prefix('Gallery')
-    ->namespace('Yousafitpro\PhotoLibrary\Controllers')
+Route::prefix('EPM')
+    ->middleware('web')
+    ->namespace('Yousafitpro\EPM\Controllers')
     ->group(function () {
-        Route::get('/', 'UcPhotoLibraryController@index')->name('uc_gallery.index');
-        Route::post('/upload_file', 'UcPhotoLibraryController@upload_file')->name('uc_gallery.upload_file');
-        Route::get('/gallery-widget', 'UcPhotoLibraryController@gallery_widget')->name('uc_gallery.gallery_widget');
-        Route::get('/gallery-delete-file/{id}',  'UcPhotoLibraryController@gallery_delete_file')->name('uc_gallery.gallery_delete_file');
-        Route::get('/gallery-widget-search', 'UcPhotoLibraryController@gallery_widget_search')->name('uc_gallery.gallery_widget_search');
-///adasd
+        Route::get('/', 'EPMServiceController@index')->name('uc_epm.index');
+        Route::get('/Add-Product', 'EPMServiceController@add_product')->name('uc_epm.add_product');
+        Route::post('/Add-Product', 'EPMServiceController@create_product')->name('uc_epm.add_product');
+
     });
 
 //asdasd
